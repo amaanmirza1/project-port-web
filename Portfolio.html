@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amaan Mirza | Developer Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<style>
+
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+body{
+font-family:'Poppins',sans-serif;
+background:rgb(41, 41, 49);
+color:white;
+overflow-x:hidden;
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+position:sticky;
+top:0;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(8px);
+z-index:1000;
+border-bottom:1px solid #222;
+transition:0.3s;
+}
+.logo{
+font-size:24px;
+font-weight:600;
+color:#45c9ce;
+letter-spacing:1px;
+transition:0.3s;
+}
+.logo:hover{
+text-shadow:0 0 10px #45c9ce;
+}
+nav ul{
+display:flex;
+list-style:none;
+}
+nav ul li{
+margin-left:25px;
+}
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:15px;
+position:relative;
+padding:5px 0;
+transition:0.3s;
+}
+nav ul li a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-4px;
+width:0%;
+height:2px;
+background:#45c9ce;
+transition:0.3s;
+}
+nav ul li a:hover{
+color:#45c9ce;
+}
+nav ul li a:hover::after{
+width:100%;
+}
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 10%;
+position:relative;
+background:linear-gradient(135deg,#000,#1c1c3c);
+overflow:hidden;
+}
+.hero h1{
+font-size:60px;
+}
+.hero span{
+color:#45c9ce;
+}
+.hero p{
+margin-top:10px;
+font-size:20px;
+opacity:0.8;
+}
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 25px;
+background:#45c9ce;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:0.3s;
+}
+.btn:hover{
+transform:scale(1.1);
+background:white;
+}
+#particles-js{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:0;
+}
+.hero-content{
+position:relative;
+z-index:2;
+}
+.imgSection img{
+width:420px;
+max-width:100%;
+animation:float 4s ease-in-out infinite;
+position:relative;
+z-index:2;
+}
+section{
+padding:90px 10%;
+}
+h2{
+color:#45c9ce;
+margin-bottom:20px;
+font-size:35px;
+}
+.skill-box span{
+display:inline-block;
+background:#111;
+padding:10px 20px;
+margin:10px;
+border-radius:20px;
+transition:0.3s;
+border:1px solid #45c9ce;
+}
+.skill-box span:hover{
+background:#45c9ce;
+color:black;
+transform:scale(1.1);
+}
+.project-container{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+}
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:10px;
+padding:20px;
+width:280px;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.1);
+}
+.card:hover{
+transform:translateY(-12px) scale(1.03);
+background:#45c9ce;
+color:black;
+}
+footer{
+text-align:center;
+padding:20px;
+background:#000;
+margin-top:40px;
+}
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0px);}
+}
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+.hero h1{
+font-size:40px;
+}
+.imgSection{
+margin-top:40px;
+}
+}
+  
+
+
+
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">Amaan Mirza</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<section id="home" class="hero">
+<div id="particles-js"></div>
+<div class="hero-content">
+<h1>Hi, I'm <span>Amaan Mirza</span></h1>
+<p>Python & Django Developer</p>
+<a href="#projects" class="btn">View My Work</a>
+</div>
+<div class="imgSection">
+<img src="am.png" alt="profile">
+</div>
+</section>
+<section id="about">
+<h2>About Me</h2>
+<p>
+I am a passionate developer focused on building real-world projects using
+Python and Django. I enjoy creating clean and efficient applications and
+learning new technologies.
+</p>
+</section>
+<section id="skills">
+<h2>Skills</h2>
+<div class="skill-box">
+<span>Python</span>
+<span>Django</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>Git</span>
+</div>
+</section>
+<section id="projects">
+<h2>Projects</h2>
+<div class="project-container">
+<div class="card">
+<h3>Student Management System</h3>
+<p>CRUD based project built in Python.</p>
+</div>
+<div class="card">
+<h3>Quiz App</h3>
+<p>Interactive console-based quiz application.</p>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2>Contact Me</h2>
+<p>Email: ammirxaa@gmail.com</p>
+<p>LinkedIn: www.linkedin.com/in/amaan-mirza-9306a93ab</p>
+</section>
+<footer>
+<p>© 2026 Amaan Mirza | All Rights Reserved</p>
+</footer>
+<script>
+
+
+
+
+particlesJS("particles-js", {
+"particles": {
+"number": { "value": 80 },
+"color": { "value": "#45c9ce" },
+"shape": { "type": "circle" },
+"opacity": { "value": 0.5 },
+"size": { "value": 3 },
+"line_linked": {
+"enable": true,
+"distance": 150,
+"color": "#45c9ce",
+"opacity": 0.4,
+"width": 1
+},
+"move": {
+"enable": true,
+"speed": 3
+}
+},
+"interactivity": {
+"events": {
+"onhover": {
+"enable": true,
+"mode": "repulse"
+},
+"onclick": {
+"enable": true,
+"mode": "push"
+}
+},
+"modes": {
+"push": { "particles_nb": 4 }
+}
+},
+"retina_detect": true
+});
+
+
+
+</script>
+</body>
+</html>
